@@ -99,47 +99,38 @@ img {
 
 /*  Header  */
 
-.site-nav {
-  display: flex;
-}
-
-.site-nav .item:not(:last-child) {
-  margin-right: 50px;
-}
-
-.nav-contacts {
-  display: flex;
-  margin-left: auto;
-}
-
-.nav-contacts .item:not(:last-child) {
-  margin-right: 50px;
-}
-
-.header-container {
+.header__container {
   display: flex;
   align-items: center;
 }
 
-.header-portfolio {
-  border-bottom: 1px solid var(--border-header-color);
-}
-
-.header-logo {
+.header__logo {
   display: inline-block;
   margin-right: 93px;
 }
 
-.header-logo-accent {
+.header__logo--accent {
   color: var(--logo-header);
 }
 
-.header-navigation {
+.nav__list {
+  display: flex;
+}
+
+.nav__item:not(:last-child) {
+  margin-right: 50px;
+}
+
+.nav__link {
   position: relative;
   display: block;
   padding-top: 32px;
   padding-bottom: 32px;
 
+  font-weight: 500;
+  font-size: 14px;
+  line-height: calc(16 / 14);
+  letter-spacing: 0.02em;
   color: var(--main-text);
 
   transition-property: color;
@@ -147,11 +138,16 @@ img {
   transition-timing-function: var(--timing-function);
 }
 
-.header-navigation.current {
+.nav__link:hover,
+.nav__link:focus {
   color: var(--accent);
 }
 
-.header-navigation.current::after {
+.nav__link--current {
+  color: var(--accent);
+}
+
+.nav__link--current::after {
   position: absolute;
   content: '';
   display: block;
@@ -162,7 +158,16 @@ img {
   border-radius: 2px;
 }
 
-.header-contacts {
+.contacts__list {
+  display: flex;
+  margin-left: auto;
+}
+
+.contacts__item:not(:last-child) {
+  margin-right: 50px;
+}
+
+.contacts_link {
   position: relative;
   display: flex;
   align-items: center;
@@ -171,28 +176,27 @@ img {
   padding-top: 32px;
   padding-bottom: 32px;
 
+  font-weight: 500;
+  font-size: 14px;
+  line-height: calc(16 / 14);
+  letter-spacing: 0.02em;
+
   transition-property: color;
   transition-duration: var(--duration);
   transition-timing-function: var(--timing-function);
 }
 
-.header-navigation:hover,
-.header-navigation:focus,
-.header-contacts:hover,
-.header-contacts:focus {
+.contacts_link:hover,
+.contacts_link:focus {
   color: var(--accent);
 }
 
-.header-icon {
+.contacts-icon {
   fill: currentColor;
 }
 
-.header-navigation,
-.header-contacts {
-  font-weight: 500;
-  font-size: 14px;
-  line-height: calc(16 / 14);
-  letter-spacing: 0.02em;
+.header-portfolio {
+  border-bottom: 1px solid var(--border-header-color);
 }
 
 /* Hero */

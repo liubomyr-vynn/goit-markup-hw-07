@@ -1,11 +1,5 @@
-.activity__title {
-  margin-bottom: 50px;
-
-  font-weight: 700;
-  font-size: 36px;
-  line-height: calc(42 / 36);
-  text-align: center;
-  letter-spacing: 0.03em;
+.activity {
+  @include section;
 }
 
 .activity__list {
@@ -29,12 +23,9 @@
   align-items: center;
   justify-content: center;
 
-  font-family: inherit;
-  font-weight: 700;
-  font-size: 14px;
-  line-height: calc(16 / 14);
+  @include fonts(700, 14px, false, calc(16 / 14), 0.03em);
+
   text-align: center;
-  letter-spacing: 0.03em;
   text-transform: uppercase;
 
   color: var(--white-color);

@@ -1,3 +1,7 @@
+.portfolio {
+  @include section;
+}
+
 .filter__list {
   display: flex;
   gap: 8px;
@@ -7,11 +11,10 @@
 
 .filter__btn {
   font-family: inherit;
+
+  @include fonts(500, 16px, false, calc(26 / 16), 0.03em);
   color: var(--main-text);
-  font-weight: 500;
-  font-size: 16px;
-  line-height: calc(26 / 16);
-  letter-spacing: 0.03em;
+
   background: var(--background-color);
   border-radius: 4px;
   border: 0;
@@ -24,13 +27,12 @@
 
   &:hover,
   &:focus {
-      color: var(--white-color);
-      background: var(--accent);
-      box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
-        0px 2px 2px rgba(0, 0, 0, 0.12);
+    color: var(--white-color);
+    background: var(--accent);
+    box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
+      0px 2px 2px rgba(0, 0, 0, 0.12);
   }
 }
-
 
 .portfolio__list {
   display: flex;
@@ -50,11 +52,7 @@
 
   transform: translateY(100%);
 
-  font: inherit;
-  font-weight: 400;
-  font-size: 18px;
-  line-height: calc(28 / 18);
-  letter-spacing: 0.03em;
+  @include fonts(400, 18px, false, calc(28 / 18), 0.03em);
 
   color: var(--white-color);
   background: rgba(33, 150, 243, 0.9);
@@ -88,7 +86,7 @@
   &:hover,
   &:focus {
     box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
-    1px 4px 6px rgba(0, 0, 0, 0.16);
+      1px 4px 6px rgba(0, 0, 0, 0.16);
   }
 }
 
@@ -101,16 +99,11 @@
 .portfolio__title {
   margin-bottom: 4px;
 
+  @include fonts(700, 18px, false, calc(36 / 18), 0.06em);
   color: var(--main-text);
-  font-weight: 700;
-  font-size: 18px;
-  line-height: calc(36 / 18);
-  letter-spacing: 0.06em;
 }
 
 .portfolio__text {
+  @include fonts(false, 16px, false, calc(30 / 16), 0.03em);
   color: var(--secondary-text);
-  font-size: 16px;
-  line-height: calc(30 / 16);
-  letter-spacing: 0.03em;
 }

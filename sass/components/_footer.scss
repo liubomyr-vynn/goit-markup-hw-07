@@ -11,9 +11,9 @@
 
 .footer__contacts {
   width: 231px;
-  font-size: 14px;
-  line-height: calc(24 / 14);
-  letter-spacing: 0.03em;
+
+  @include fonts(false, 14px, false, calc(24 / 14), 0.03em);
+
   margin-right: 70px;
 }
 
@@ -46,11 +46,11 @@
   &:hover,
   &:focus {
     color: var(--accent);
-    }
+  }
 }
 
 .adress__link--mail {
-color: var(--white-trasparent);
+  color: var(--white-trasparent);
 
   transition-property: color;
   transition-duration: var(--duration);
@@ -81,10 +81,9 @@ color: var(--white-trasparent);
 
 .socials__title {
   display: block;
-  font-weight: 700;
-  font-size: 14px;
-  line-height: calc(16 / 14);
-  letter-spacing: 0.03em;
+
+  @include fonts(700, 14px, false, calc(16 / 14), 0.03em);
+
   text-transform: uppercase;
   color: #ffffff;
   margin-right: auto;
@@ -111,13 +110,8 @@ color: var(--white-trasparent);
 }
 
 .subscription__title {
-  font-family: inherit;
-  font-weight: 700;
-  font-size: 14px;
-  line-height: calc(16 / 14);
-  letter-spacing: 0.03em;
+  @include fonts(700, 14px, false, calc(16 / 14), 0.03em);
   text-transform: uppercase;
-
   color: #ffffff;
 
   margin-bottom: 20px;
@@ -149,20 +143,14 @@ color: var(--white-trasparent);
   transition-timing-function: var(--timing-function);
 
   &:focus {
-      border-color: var(--accent);
-    }
+    border-color: var(--accent);
+  }
 }
 
-
 .subscription__input::placeholder {
-  font-family: inherit;
-  font-weight: 400;
-  font-size: 16px;
-  line-height: calc(20 / 16);
-  align-items: center;
-  letter-spacing: 0.03em;
-
+  @include fonts(400, 16px, false, calc(20 / 16), 0.03em);
   color: rgba(255, 255, 255, 0.6);
+  align-items: center;
 }
 
 .footer__button {

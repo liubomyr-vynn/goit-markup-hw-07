@@ -2,10 +2,12 @@
 @import './utils/variables';
 @import './utils/visually-hidden';
 @import './utils/placeholders';
+@import './utils/mixins';
 
 // base styles
 @import './base/base';
 @import './base/reset';
+@import './base/animation';
 
 // components styles
 @import './components/container';
@@ -22,4 +24,3 @@
 @import './components/footer';
 @import './components/portfolio';
 @import './components/modal';
-@import './components/animation';

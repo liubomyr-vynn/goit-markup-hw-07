@@ -26,10 +26,8 @@
   padding-top: 32px;
   padding-bottom: 32px;
 
-  font-weight: 500;
-  font-size: 14px;
-  line-height: calc(16 / 14);
-  letter-spacing: 0.02em;
+  @include fonts(500, 14px, false, calc(16 / 14), 0.02em);
+
   color: var(--main-text);
 
   transition-property: color;
@@ -38,11 +36,9 @@
 
   &:hover,
   &:focus {
-      color: var(--accent);
-    }
+    color: var(--accent);
+  }
 }
-
-
 
 .nav__link--current {
   color: var(--accent);
@@ -80,10 +76,7 @@
   padding-top: 32px;
   padding-bottom: 32px;
 
-  font-weight: 500;
-  font-size: 14px;
-  line-height: calc(16 / 14);
-  letter-spacing: 0.02em;
+  @include fonts(500, 14px, false, calc(16 / 14), 0.02em);
 
   transition-property: color;
   transition-duration: var(--duration);
@@ -91,11 +84,9 @@
 
   &:hover,
   &:focus {
-      color: var(--accent);
-    }
+    color: var(--accent);
+  }
 }
-
-
 
 .contacts__icon {
   fill: currentColor;

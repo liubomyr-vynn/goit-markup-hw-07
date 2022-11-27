@@ -1,3 +1,8 @@
+.features {
+  @include section;
+  @extend %section--padding-bottom;
+}
+
 .features__list {
   display: flex;
   gap: 30px;
@@ -25,21 +30,13 @@
   margin-top: 30px;
   margin-bottom: 10px;
 
-  font-weight: 700;
-  font-size: 14px;
-  line-height: calc(16 / 14);
-  letter-spacing: 0.03em;
+  @include fonts(700, 14px, false, calc(16 / 14), 0.03em);
   text-transform: uppercase;
 }
 
 .features__text {
   display: inline-block;
-  color: var(--secondary-text);
-  font-size: 14px;
-  line-height: calc(24 / 14);
-  letter-spacing: 0.03em;
-}
 
-.features--padding-bottom {
-  padding-bottom: 0;
+  @include fonts(false, 14px, false, calc(24 / 14), 0.03em);
+  color: var(--secondary-text);
 }
